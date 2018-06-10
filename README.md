@@ -16,4 +16,17 @@ This allows the client to make acquiring dependencies someone else's problem. <b
 The intent behind dependency injection is to decouple objects to the extent that no client code 
 has to be changed simply because an object it depends on needs to be changed to a different one.  <br />
 
-![stack Overflow](http://lmsotfy.com/so.png)
+
+
+## Dependency Injection 
+![Dependency Injection](https://github.com/shahedbd/.NetCoreDI/blob/master/Sln.DotNetCoreDI/DotNetCoreDI/Resources/DBObjects.jpg)
+
+<br />
+
+![Dependency Injection](https://github.com/shahedbd/.NetCoreDI/blob/master/Sln.DotNetCoreDI/DotNetCoreDI/Resources/dependency-injection-golf.png)
+
+<br />
+
+![Dependency Injection](https://github.com/shahedbd/.NetCoreDI/blob/master/Sln.DotNetCoreDI/DotNetCoreDI/Resources/Source.png)
+
+<br />
