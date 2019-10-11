@@ -1,21 +1,21 @@
-﻿using DotNetCoreDI.Interfaces;
+﻿using DotNetCoreDI.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetCoreDI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILocalPCInfos _localpcinfos;
+        private readonly ICommonData _commonData;
 
-        public HomeController(ILocalPCInfos localpcinfos)
+        public HomeController(ICommonData commonData)
         {
-            _localpcinfos = localpcinfos;
+            _commonData = commonData;
         }
 
 
         public IActionResult Index()
         {
-            var serverTime = _localpcinfos.Now;
+            var serverTime = _commonData.GetCurrentDateTime();
             
             if (serverTime.Hour < 12)
             {
@@ -31,7 +31,7 @@ namespace DotNetCoreDI.Controllers
                 ViewData["Message"] = "It's evening here - Good Evening!";
             }
 
-            ViewData["IPAddress"] = _localpcinfos.IPAddress;
+            ViewData["MachineName"] = _commonData.GetMachineName();
 
             return View();
         }
