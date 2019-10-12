@@ -1,0 +1,4 @@
+﻿
+https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/
+
+Install-Package Microsoft.Extensions.DependencyInjection -Version 3.0.0

@@ -6,21 +6,19 @@ namespace DotNetCoreDI.Controllers
     public class HomeController : Controller
     {
         private readonly ICommonData _commonData;
-
         public HomeController(ICommonData commonData)
         {
             _commonData = commonData;
         }
 
-
         public IActionResult Index()
         {
             var serverTime = _commonData.GetCurrentDateTime();
-            
+
             if (serverTime.Hour < 12)
             {
                 ViewData["Message"] = "It's morning here - Good Morning!";
-                
+
             }
             else if (serverTime.Hour < 17)
             {
